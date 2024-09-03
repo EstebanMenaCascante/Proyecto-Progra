@@ -11,33 +11,50 @@ int main()
 {
 	int opcion;
 
-	printf("Bienvenido a Nueva Cinema\n\n");
-	printf("Que opcion desea escoger\n");
-	printf("Digite 1 para leer acerca de nuestro Cinema:\n");
-	printf("Digite 2 para acceder a mantenimiento:\n");
-	printf("Digite 3 para acceder a la reserva de asientos:\n");
-	printf("Digite 4 para acceder a la compra de asientos:\n");
-	printf("Digite 5 para cerrar el programa:\n\n");
-	printf("Digite la opcion que desea escoger: ");
-	scanf_s("%d", &opcion);
-
 	do
 	{
+		printf("Bienvenido a Nueva Cinema\n\n");
+		printf("Que opcion desea escoger\n");
+		printf("Digite 1 para acceder a archivo:\n");
+		printf("Digite 2 para acceder a mantenimiento:\n");
+		printf("Digite 3 para acceder a la reserva de asientos:\n");
+		printf("Digite 4 para acceder a la compra de asientos:\n");
+
+		printf("Digite la opcion que desea escoger: ");
+		scanf_s("%d", &opcion);
 	switch (opcion)
 	{
-	case 1:
+	case 1:	
+		
+		int newopcion;
+		do
+		{
+
 		printf("Digite 1 para leer acerca de nuestro Cinema:\n");
+		printf("Digite 2 para cerrar el programa:\n\n");
+		scanf_s("%d", &newopcion);
+
+		switch (newopcion)
+		{
+		case 1:
 
 
+
+			break;
+		default:
+			break;
+		}
+
+		} while (newopcion==2);
 		break;
 	case 2:
 
-		printf("Digite 4 para leer acerca de nuestro Cinema:\n");
+		
 
 		break;
 	case 3:
 
-		printf("Digite 6 para leer acerca de nuestro Cinema:\n");
+
 
 		break;
 	default:
