@@ -8,7 +8,30 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+	int opcion = 0;
+
+	switch (opcion)
+	{
+	case 1:
+
+
+
+		break;
+	case 2:
+
+
+
+		break;
+	case 3:
+
+
+
+		break;
+	default:
+		break;
+	}
+
+    
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
