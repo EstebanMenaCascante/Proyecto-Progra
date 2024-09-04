@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <cstring>
 #include "menu.h"
 
 using namespace std;
@@ -10,14 +11,27 @@ using namespace std;
 int main()
 {
 	int opcion;
+	//char nameProfile;
 	bool exit = false;
+/*
+	int opcionProfile;
+	printf("Bienvenido a Nueva Cinema\n\n");
+	printf("Que opcion de perfil desea escoger\n");
+	printf("Digite 1 para acceder como Administrador\nDigite 2 para acceder como usuario\n");
+	printf("Digite su opcion:");
+	scanf_s("%d", &opcionProfile);
+	profile(&nameProfile,opcionProfile);
+	*/
 	do
 	{
-		printf("Bienvenido a Nueva Cinema\n\n");
+		//printf("%s","%c","Bienvenido a Nueva Cinema ",nameProfile);
+		printf("Bienvenido a Nueva Cinema\n");
 		printf("Que opcion desea escoger\n");
-
+	
 		printf("Digite 1 para acceder a archivo:\n");
+		//if (profile(&nameProfile, opcionProfile)==true) {
 		printf("Digite 2 para acceder a mantenimiento:\n");
+		//}
 		printf("Digite 3 para acceder a la reserva de asientos:\n");
 		printf("Digite 4 para acceder a la compra de asientos:\n");
 
