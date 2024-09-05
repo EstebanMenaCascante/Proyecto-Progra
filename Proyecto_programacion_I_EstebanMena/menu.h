@@ -10,4 +10,4 @@ using namespace std;
 
 void menuArchivo(bool*);
 void menuMantenimiento();
-//bool profile(char*, int);
+bool profile(char*, int);

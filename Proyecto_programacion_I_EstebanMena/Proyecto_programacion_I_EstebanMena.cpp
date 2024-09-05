@@ -11,27 +11,32 @@ using namespace std;
 int main()
 {
 	int opcion;
-	//char nameProfile;
+	char nameProfile[50];
 	bool exit = false;
-/*
+
 	int opcionProfile;
 	printf("Bienvenido a Nueva Cinema\n\n");
 	printf("Que opcion de perfil desea escoger\n");
 	printf("Digite 1 para acceder como Administrador\nDigite 2 para acceder como usuario\n");
 	printf("Digite su opcion:");
 	scanf_s("%d", &opcionProfile);
-	profile(&nameProfile,opcionProfile);
-	*/
+
+	bool isAdmin = profile(nameProfile, opcionProfile);
+
+	if (!isAdmin && opcionProfile == 1) {
+		printf("No se pudo iniciar sesion como administrador.\n");
+		return 0;
+	}
+
 	do
 	{
-		//printf("%s","%c","Bienvenido a Nueva Cinema ",nameProfile);
+		system("cls");
+		printf("%s","Bienvenido a Nueva Cinema ", "%c",nameProfile);
 		printf("Bienvenido a Nueva Cinema\n");
 		printf("Que opcion desea escoger\n");
 	
 		printf("Digite 1 para acceder a archivo:\n");
-		//if (profile(&nameProfile, opcionProfile)==true) {
 		printf("Digite 2 para acceder a mantenimiento:\n");
-		//}
 		printf("Digite 3 para acceder a la reserva de asientos:\n");
 		printf("Digite 4 para acceder a la compra de asientos:\n");
 
@@ -45,9 +50,13 @@ int main()
 
 		break;
 	case 2:
-
-		menuMantenimiento();
-
+		if (isAdmin) {
+			menuMantenimiento();
+		}
+		else {
+			printf("Opcion no valida para usuario, por favor inicie como administrador.\n\n");
+			system("pause");
+		}
 		break;
 	case 3:
 

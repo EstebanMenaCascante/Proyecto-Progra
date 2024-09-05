@@ -98,28 +98,30 @@ void menuMantenimiento()
 	} while (newopcion != 4);
 
 }
-/*
+
 bool profile(char *profileName, int profileOpcion)
 {
-	string pasword = NULL;
+	char password[20];
+	char correctPassword[] = "agente007";
 
-	if (profileOpcion == 1)
-	{
-		printf("Digite su nombre de usuario: ");
-		scanf_s("%c", &profileName);
-		//*profileName;
-		printf("\nDigite su contrasena de administrador:");
-		scanf_s("%d", &pasword);
-		if (pasword=="agente007")
-		{
-		return true;
+	if (profileOpcion == 1) {
+		printf("\nDigite su nombre de usuario: ");
+		scanf_s("%s", profileName, 50);
+
+		printf("\nDigite su contrasena de administrador: ");
+		scanf_s("%s", password, sizeof(password));  
+
+		if (strcmp(password, correctPassword) == 0) {
+			return true;
+		}
+		else {
+			printf("No se pudo iniciar sesion como administrador contrasena incorrecta.\n");
+			return false;
 		}
 	}
 	else {
-		printf("Digite su nombre de usuario: ");
-		scanf_s("%c", &profileName);
+		printf("\nDigite su nombre de usuario: ");
+		scanf_s("%s", profileName, 50);
 		return false;
-	}
-	
+	}	
 }
-*/
