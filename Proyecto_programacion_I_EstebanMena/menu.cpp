@@ -1,5 +1,7 @@
 #include "menu.h"
 
+Billboard billboar1;
+
 void menuArchivo(bool *exit)
 {
 	int newopcion;
@@ -69,8 +71,10 @@ void menuMantenimiento()
 		switch (newopcion)
 		{
 		case 1:
-
-
+			
+			billboar1.crateDynamicVec();
+			billboar1.movieLoad();
+			billboar1.showMovie();
 
 			break;
 		case 2:

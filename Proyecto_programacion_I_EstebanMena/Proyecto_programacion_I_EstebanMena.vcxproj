@@ -127,14 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Billboard.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="Movie.cpp" />
     <ClCompile Include="Proyecto_programacion_I_EstebanMena.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="Schedule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Billboard.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="Movie.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="Schedule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

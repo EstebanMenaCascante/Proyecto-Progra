@@ -4,6 +4,9 @@
 #include <iostream>
 #include <cstring>
 #include <stdio.h>
+#include <string>
+#include "Billboard.h"
+#include "Movie.h"
 
 using namespace std;
 

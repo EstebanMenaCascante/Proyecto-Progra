@@ -4,7 +4,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <cstring>
+#include <string>
 #include "menu.h"
+#include "Billboard.h"
+#include "Movie.h"
 
 using namespace std;
 
@@ -13,6 +16,10 @@ int main()
 	int opcion;
 	char nameProfile[50];
 	bool exit = false;
+
+	Billboard billboar1;
+
+
 
 	int opcionProfile;
 	printf("Bienvenido a Nueva Cinema\n\n");
@@ -31,9 +38,9 @@ int main()
 	do
 	{
 		system("cls");
-		printf("%s","Bienvenido a Nueva Cinema ", "%c",nameProfile);
-		printf("Bienvenido a Nueva Cinema\n");
-		printf("Que opcion desea escoger\n");
+		printf("%s","Bienvenido a Nueva Cinema ");
+		cout << nameProfile;
+		printf("\nQue opcion desea escoger\n");
 	
 		printf("Digite 1 para acceder a archivo:\n");
 		printf("Digite 2 para acceder a mantenimiento:\n");
