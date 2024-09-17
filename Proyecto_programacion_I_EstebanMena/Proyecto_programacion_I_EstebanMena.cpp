@@ -6,7 +6,6 @@
 #include <cstring>
 #include <string>
 #include "menu.h"
-#include "Billboard.h"
 #include "Movie.h"
 
 using namespace std;
@@ -17,7 +16,6 @@ int main()
 	char nameProfile[50];
 	bool exit = false;
 
-	Billboard billboar1;
 
 
 

@@ -1,6 +1,6 @@
 #include "menu.h"
 
-Billboard billboar1;
+
 
 void menuArchivo(bool *exit)
 {
@@ -52,6 +52,51 @@ void menuArchivo(bool *exit)
 
 }
 
+Movie* moviesVector;
+int numberMovies;
+
+void movieLoad()
+{
+	for (int i = 0; i < numberMovies; i++)
+	{
+		string nameMovie, countryMovie, sipnosisMovie;
+		int yearMovie, durationMovie;
+
+		printf("Digite el nombre de la pelicula: ");
+		cin.ignore();
+		getline(cin, nameMovie);
+
+		printf("Digite el anio de la pelicula: ");
+		cin >> yearMovie;
+
+		printf("Digite la duracion de la pelicula: ");
+		cin >> durationMovie;
+
+		printf("Digite el pais de origen de la pelicula: ");
+		cin.ignore();
+		getline(cin, countryMovie);
+
+		printf("Digite la sinopsis de la pelicula: ");
+		getline(cin, sipnosisMovie);
+
+		moviesVector[i] = Movie(nameMovie, yearMovie, durationMovie, countryMovie, sipnosisMovie);
+	}
+}
+
+void showMovie()
+{
+	for (int i = 0; i < numberMovies; i++)
+	{
+		cout << endl << endl;
+		cout << moviesVector[i].getnameMovie() << endl;
+		cout << moviesVector[i].getyearMovie() << endl;
+		cout << moviesVector[i].getdurationMovie() << endl;
+		cout << moviesVector[i].getcountryMovie() << endl;
+		cout << moviesVector[i].getsipnosisMovie() << endl;
+	}
+	system("pause");
+}
+
 void menuMantenimiento()
 {
 	int newopcion;
@@ -72,9 +117,13 @@ void menuMantenimiento()
 		{
 		case 1:
 			
-			billboar1.crateDynamicVec();
-			billboar1.movieLoad();
-			billboar1.showMovie();
+
+			printf("Cual es la cantidad de peiculas que desea agregar? \n");
+			scanf_s("%d", &numberMovies);
+			moviesVector = new Movie[numberMovies];
+
+			movieLoad();
+			showMovie();
 
 			break;
 		case 2:

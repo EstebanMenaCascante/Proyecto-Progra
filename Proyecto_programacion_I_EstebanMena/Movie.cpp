@@ -1,18 +1,13 @@
 #include "Movie.h"
 
+
 Movie::Movie()
 {
-	printf("Digite el nombre de la pelicula: \n");
-		scanf_s("%s", &nameMovie);
-		printf("Digite el anio de la pelicula: \n");
-		scanf_s("%d", &yearMovie);
-		printf("Digite la duracion de la pelicula: \n");
-		scanf_s("%d", &durationMovie);
-		printf("Digite el pais de procedencia de la pelicula: \n");
-		scanf_s("%s", &countryMovie);
-		printf("Digite la sipnosis de la pelicula: \n");
-		scanf_s("%s", &sipnosisMovie);
-
+	nameMovie = "";
+	yearMovie = 0;
+	durationMovie = 0;
+	countryMovie = "";
+	sipnosisMovie = "";
 }
 
 Movie::Movie(string pnameMovie, int pyearMovie, int pdurationMovie, string pcountryMovie, string psipnosisMovie)

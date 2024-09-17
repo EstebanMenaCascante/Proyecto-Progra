@@ -1,41 +1,9 @@
 ﻿  Movie.cpp
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11): warning C4477: 'scanf_s' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string *'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11):
-      este argumento se utiliza por un especificador de conversión
-  
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11): warning C4473: "scanf_s": no se pasaron suficientes argumentos para la cadena de formato
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11):
-      los marcadores de posición y sus parámetros esperan 2 argumentos variádicos, pero se proporcionaron 1
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11):
-      el argumento variádico 2 que falta es requerido por la cadena de formato '%s'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(6,11):
-      este argumento se utiliza como un tamaño de búfer
-  
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11): warning C4477: 'scanf_s' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string *'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11):
-      este argumento se utiliza por un especificador de conversión
-  
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11): warning C4473: "scanf_s": no se pasaron suficientes argumentos para la cadena de formato
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11):
-      los marcadores de posición y sus parámetros esperan 2 argumentos variádicos, pero se proporcionaron 1
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11):
-      el argumento variádico 2 que falta es requerido por la cadena de formato '%s'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(12,11):
-      este argumento se utiliza como un tamaño de búfer
-  
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11): warning C4477: 'scanf_s' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string *'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11):
-      este argumento se utiliza por un especificador de conversión
-  
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11): warning C4473: "scanf_s": no se pasaron suficientes argumentos para la cadena de formato
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11):
-      los marcadores de posición y sus parámetros esperan 2 argumentos variádicos, pero se proporcionaron 1
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11):
-      el argumento variádico 2 que falta es requerido por la cadena de formato '%s'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\Movie.cpp(14,11):
-      este argumento se utiliza como un tamaño de búfer
-  
   Proyecto_programacion_I_EstebanMena.cpp
-  Schedule.cpp
+  menu.cpp
+C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\menu.cpp(165,11): warning C4477: 'scanf_s' : la cadena de formato '%s' requiere un argumento de tipo 'unsigned int', pero el argumento variádico 2 tiene el tipo 'size_t'
+      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\menu.cpp(165,11):
+      este argumento se utiliza como un tamaño de búfer
+  
   Generando código...
   Proyecto_programacion_I_EstebanMena.vcxproj -> C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\x64\Debug\Proyecto_programacion_I_EstebanMena.exe
