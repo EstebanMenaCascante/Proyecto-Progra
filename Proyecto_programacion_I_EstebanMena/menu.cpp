@@ -1,6 +1,5 @@
 #include "menu.h"
-
-
+#include "Room.h"
 
 void menuArchivo(bool *exit)
 {
@@ -52,11 +51,15 @@ void menuArchivo(bool *exit)
 
 }
 
+Room room1;
 Movie* moviesVector;
+int numberRooms;
 int numberMovies;
+
 
 void movieLoad()
 {
+	int ID = 0;
 	for (int i = 0; i < numberMovies; i++)
 	{
 		string nameMovie, countryMovie, sipnosisMovie;
@@ -79,22 +82,42 @@ void movieLoad()
 		printf("Digite la sinopsis de la pelicula: ");
 		getline(cin, sipnosisMovie);
 
-		moviesVector[i] = Movie(nameMovie, yearMovie, durationMovie, countryMovie, sipnosisMovie);
+		ID++;
+
+		moviesVector[i] = Movie(nameMovie, yearMovie, durationMovie, countryMovie, sipnosisMovie, ID);
 	}
 }
 
+int movieID = 0;
+
 void showMovie()
 {
-	for (int i = 0; i < numberMovies; i++)
-	{
-		cout << endl << endl;
-		cout << moviesVector[i].getnameMovie() << endl;
-		cout << moviesVector[i].getyearMovie() << endl;
-		cout << moviesVector[i].getdurationMovie() << endl;
-		cout << moviesVector[i].getcountryMovie() << endl;
-		cout << moviesVector[i].getsipnosisMovie() << endl;
+	cout << "Listado de Peliculas:\n";
+	for (int i = 0; i < numberMovies; ++i) {
+		cout << "ID: " << moviesVector[i].getmovieID() << endl;
+		cout << "Nombre: " << moviesVector[i].getnameMovie() << endl;
+		cout << "Anio: " << moviesVector[i].getyearMovie() << endl;
+		cout << "Duracion: " << moviesVector[i].getdurationMovie() << " minutos" << endl;
+		cout << "Pais: " << moviesVector[i].getcountryMovie() << endl;
+		cout << "Sinopsis: " << moviesVector[i].getsipnosisMovie() << endl;
+		cout << "----------------------------\n";
 	}
 	system("pause");
+}
+
+void movieShowName()
+{
+	for (int i = 0; i < numberMovies; ++i) 
+	{
+		cout << "Nombre: " << moviesVector[i].getnameMovie() << endl;
+		cout << "ID: " << moviesVector[i].getmovieID() << endl;
+	}
+}
+
+void movieShowInRoom(int asing)
+{
+		cout << "Pelicula: " << moviesVector[asing-1].getnameMovie() << endl;
+		cout << "ID de la pelicula: " << moviesVector[asing-1].getmovieID() << endl;	
 }
 
 void menuMantenimiento()
@@ -128,6 +151,7 @@ void menuMantenimiento()
 			break;
 		case 2:
 
+			room1.menuRooms();
 			
 			break;
 
@@ -155,7 +179,7 @@ void menuMantenimiento()
 bool profile(char *profileName, int profileOpcion)
 {
 	char password[20];
-	char correctPassword[] = "agente007";
+	char correctPassword[] = "lol";
 
 	if (profileOpcion == 1) {
 		printf("\nDigite su nombre de usuario: ");

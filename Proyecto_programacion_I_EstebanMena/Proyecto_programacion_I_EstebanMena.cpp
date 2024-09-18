@@ -7,6 +7,7 @@
 #include <string>
 #include "menu.h"
 #include "Movie.h"
+#include <windows.h>
 
 using namespace std;
 
@@ -16,7 +17,8 @@ int main()
 	char nameProfile[50];
 	bool exit = false;
 
-
+	Room* rooms = nullptr;
+	int numberOfRooms = 0;
 
 
 	int opcionProfile;
@@ -65,12 +67,12 @@ int main()
 		break;
 	case 3:
 
-
+		rooms->reserve();
 
 		break;
 	case 4:
 
-
+		rooms->sell();
 
 		break;
 	default:

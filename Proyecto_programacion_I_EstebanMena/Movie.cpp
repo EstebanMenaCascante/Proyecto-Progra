@@ -10,14 +10,15 @@ Movie::Movie()
 	sipnosisMovie = "";
 }
 
-Movie::Movie(string pnameMovie, int pyearMovie, int pdurationMovie, string pcountryMovie, string psipnosisMovie)
+Movie::Movie(string pnameMovie, int pyearMovie, int pdurationMovie, string pcountryMovie, string psipnosisMovie, int pmovieID)
 {
 	this->nameMovie = pnameMovie;
 	this->yearMovie = pyearMovie;
 	this->durationMovie = pdurationMovie;
 	this->countryMovie = pcountryMovie;
 	this->sipnosisMovie = psipnosisMovie;
-
+	this->movieID = pmovieID;
+	
 }
 
 Movie::~Movie()
@@ -49,6 +50,11 @@ void Movie::setsipnosisMovie(string psipnosisMovie)
 	this->sipnosisMovie = psipnosisMovie;
 }
 
+void Movie::setmovieID(int pmovieID)
+{
+	this->movieID = pmovieID;
+}
+
 string Movie::getnameMovie()
 {
 	return nameMovie;
@@ -72,4 +78,9 @@ string Movie::getcountryMovie()
 string Movie::getsipnosisMovie()
 {
 	return sipnosisMovie;
+}
+
+int Movie::getmovieID()
+{
+	return movieID;
 }

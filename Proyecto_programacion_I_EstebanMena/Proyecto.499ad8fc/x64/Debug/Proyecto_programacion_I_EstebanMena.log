@@ -1,9 +1,2 @@
-﻿  Movie.cpp
-  Proyecto_programacion_I_EstebanMena.cpp
-  menu.cpp
-C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\menu.cpp(165,11): warning C4477: 'scanf_s' : la cadena de formato '%s' requiere un argumento de tipo 'unsigned int', pero el argumento variádico 2 tiene el tipo 'size_t'
-      C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\menu.cpp(165,11):
-      este argumento se utiliza como un tamaño de búfer
-  
-  Generando código...
+﻿  Room.cpp
   Proyecto_programacion_I_EstebanMena.vcxproj -> C:\Users\emena\Proyecto-Progra\Proyecto_programacion_I_EstebanMena\x64\Debug\Proyecto_programacion_I_EstebanMena.exe
