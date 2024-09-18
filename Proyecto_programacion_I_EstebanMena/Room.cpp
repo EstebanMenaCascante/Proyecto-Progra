@@ -57,6 +57,21 @@ void Room::setmovieAsing(int pmovieAsing)
     movieAsign = pmovieAsing;
 }
 
+void Room::setday(string pday)
+{
+    day = pday;
+}
+
+void Room::setstartHour(string pstarHour)
+{
+    startHour = pstarHour;
+}
+
+void Room::setfinishHour(string pfinisHour)
+{
+    finishHour = pfinisHour;
+}
+
 int Room::getRoomNumber()
 {
     return roomNumber;
@@ -80,6 +95,21 @@ float Room::getTicketPrice()
 int Room::getmovieAsing()
 {
     return movieAsign;
+}
+
+string Room::getday()
+{
+    return day;
+}
+
+string Room::getstartHour()
+{
+    return startHour;
+}
+
+string Room::getfinishHour()
+{
+    return finishHour;
 }
 
 
@@ -139,6 +169,15 @@ void Room::loadRoomInfo()
     cout << "Digite la pelicula que quiere asiganar a esta sala: ";
     cin >> movieAsign;
 
+    cout << "Digite la fecha: ";
+    cin >> day;
+
+    cout << "Digite la hora de inicio: ";
+    cin >> startHour;
+
+    cout << "Digite la hora de fin: ";
+    cin >> finishHour;
+
     cout << "Digite la cantidad de filas de butacas: ";
     cin >> rowCount;
 
@@ -174,6 +213,10 @@ void Room::showRooms(Room* rooms, int numberOfRooms)
         cout << "Numero de sala: " << rooms[i].getRoomNumber() << endl;
         movieShowInRoom(rooms[i].getmovieAsing());
         cout << "Precio del boleto: " << rooms[i].getTicketPrice() << endl;
+        cout << "Dia: " << rooms[i].getday() << endl;
+        cout << "Hora de inicio: " << rooms[i].getstartHour() << endl;
+        cout << "Hora de fin: " << rooms[i].getfinishHour() << endl;
+
         rooms[i].showSeatMatrix();  // Mostrar la disposición de las butacas con colores
     }
 }
@@ -189,13 +232,9 @@ void Room::showSpecificRooms(int roomNumbers)
     
 }
 
-int Room::generateConsecutive()
-{
-    int consecutiveNumber = 1000;
-    return consecutiveNumber--;
-}
 
 int numberOfRooms;
+int consecutiveNumber;
 
 void Room::menuRooms()
 {
@@ -204,7 +243,6 @@ void Room::menuRooms()
     cin >> numberOfRooms;
 
     rooms = new Room[numberOfRooms];  // Crear un arreglo dinámico de salas
-
     
     loadRooms(rooms, numberOfRooms);
 
@@ -256,6 +294,8 @@ void Room::reserveSeat(Room* rooms, int numberOfRooms)
             if (selectedRoom->seatMatrix[row][column] == 'O') {
                 selectedRoom->seatMatrix[row][column] = 'R';  // Marcar como reservado
                 cout << "Asiento reservado exitosamente." << endl;
+                cout << "El ID del ticket es: " << consecutiveNumber;
+                consecutiveNumber++;
             }
             else {
                 cout << "Asiento ya está reservado o vendido." << endl;
@@ -293,8 +333,6 @@ void Room::sellTicket(Room* rooms, int numberOfRooms)
         cout << "Ingrese el numero de tiquete generado para venta: ";
         cin >> ticketNumber;
 
-        // Verificar si el tiquete es válido
-        if (ticketNumber >= 1000 && ticketNumber < generateConsecutive()) {
             cout << "Ingrese la fila y columna del asiento que deseas vender (ej. 1 3): ";
             cin >> row >> column;
 
@@ -305,7 +343,9 @@ void Room::sellTicket(Room* rooms, int numberOfRooms)
                 if (selectedRoom->seatMatrix[row][column] == 'R') {
                     selectedRoom->seatMatrix[row][column] = 'X';  // Marcar como vendido
                     cout << "Tiquete vendido exitosamente. Precio: " << selectedRoom->ticketPrice << endl;
-                }
+                    
+                }   
+
                 else {
                     cout << "Asiento no está reservado o ya está vendido." << endl;
                 }
@@ -313,10 +353,6 @@ void Room::sellTicket(Room* rooms, int numberOfRooms)
             else {
                 cout << "Fila o columna inválida." << endl;
             }
-        }
-        else {
-            cout << "Número de tiquete inválido." << endl;
-        }
     }
     else {
         cout << "Sala no encontrada." << endl;

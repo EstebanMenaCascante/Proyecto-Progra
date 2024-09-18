@@ -16,7 +16,10 @@ private:
     int movieAsign;
     int rowCount; 
     int columnCount; 
-    float ticketPrice;  
+    float ticketPrice;
+    string day;
+    string startHour;
+    string finishHour;
     char** seatMatrix; 
 
 
@@ -32,13 +35,18 @@ public:
     void setColumnCount(int pColumnCount);
     void setTicketPrice(float pTicketPrice);
     void setmovieAsing(int pmovieAsing);
+    void setday(string pday);
+    void setstartHour(string pstarHour);
+    void setfinishHour(string pfinisHour);
   
     int getRoomNumber();
     int getRowCount();
     int getColumnCount();
     float getTicketPrice();
     int getmovieAsing();
-
+    string getday();
+    string getstartHour();
+    string getfinishHour();
 
     void showSeatMatrix();
     void setSeatState(int row, int column, char state);
@@ -51,7 +59,6 @@ public:
     void sellTicket(Room* rooms, int numberOfRooms);   // Método para vender un asiento
     void reserve();
     void sell();
-    int generateConsecutive();  // Método para generar números consecutivos de tiquetes
     Room* findRoom(Room* rooms, int numberOfRooms, int roomNumber);
 
 };

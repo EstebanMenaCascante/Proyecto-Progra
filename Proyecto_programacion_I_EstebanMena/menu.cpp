@@ -130,7 +130,7 @@ void menuMantenimiento()
 
 		printf("Digite 1 para acceder a configuracion de peliculas:\n");
 		printf("Digite 2 para acceder a configuracion de salas:\n");
-		printf("Digite 3 para acceder a cofiguracion de horarios:\n");
+		//printf("Digite 3 para acceder a cofiguracion de horarios:\n");
 		printf("Digite 4 para volver al menu principal:\n\n");
 
 		printf("Digite la opcion que desea escoger: ");
